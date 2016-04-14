@@ -4,10 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class RandomAccessFileExample {
+public class RandomAccessFileExampleFin {
 
     public static void main(String[] args) {
-    	final int RECORD_SIZE = 12; //hmmmmm.... what is the record size
+    	int recordSize = 12;
         try {
             // Create a new instance of RandomAccessFile class. We'll do a "r"
             // read and "w" write operation to the file. If you want to do a write
@@ -27,15 +27,17 @@ public class RandomAccessFileExample {
                 raf.writeUTF(books[i]);
             }
 
-            // To do: Write different book at the end of the file (replace J2EE Basic)
+            // To do: Write different book at the end of the file.
             //
-            raf.seek(RECORD_SIZE * 4);
-            raf.writeUTF("Java Rulez"); //10 chars
-       
+            //byte[] bytes = books[0].getBytes();
+            //int loc = bytes.length;
+            //System.out.println("loc is" + loc);
+            raf.seek(recordSize);
+            raf.writeUTF("Servlets  ");
+
             // To do: Move the file pointer to the beginning of the file
             //
             raf.seek(0);
-            
             // While the file pointer is less than the file length, read the
             // next strings of data file from the current position of the
             // file pointer

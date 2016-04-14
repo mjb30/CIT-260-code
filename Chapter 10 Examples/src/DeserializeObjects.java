@@ -23,7 +23,7 @@ public class DeserializeObjects
       // Read the serialized objects from the file.
       for (int i = 0; i < items.length; i++)
       {
-         items[i] = objectInputFile.readObject(); //what's missing here?
+         items[i] = (InventoryItem2) objectInputFile.readObject(); //what's missing here?
       }
       
       // Close the file.
