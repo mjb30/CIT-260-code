@@ -62,7 +62,7 @@ public class AddressInfoApp extends JFrame{
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {	// Is invoked when the user clicks the button to get the information
-				String ip = ipTextField.getText();
+				ip = ipTextField.getText();
 				m = p.matcher(ip);
 				
 				if(!m.find()){ 			// Not a valid IP address
